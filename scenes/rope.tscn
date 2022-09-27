@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/rope.gd" type="Script" id=1]
+[ext_resource path="res://assets/rope.gltf" type="PackedScene" id=2]
+[ext_resource path="res://scenes/RopeBody.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.447059, 0.278431, 0.188235, 1 )
+
+[node name="rope" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+skeleton_path = NodePath("Armature/Skeleton")
+rope_body = ExtResource( 3 )
+
+[node name="Cylinder" parent="Armature/Skeleton" index="0"]
+material/0 = SubResource( 1 )
