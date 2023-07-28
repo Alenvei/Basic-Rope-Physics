@@ -40,7 +40,7 @@ func _add_rigidbody(pos:Transform)->void:
 	add_child(rigidbody)
 	#Adding a PinJoint between RigidBodies.
 	_add_pin_joint(last_rigidbody,rigidbody)
-	#Saving the last added RigidBody for _add_pin_joint function to get posion between the old RigidBody and new RigidBody.
+	#Saving the last added RigidBody for _add_pin_joint function to get position between the old RigidBody and new RigidBody.
 	last_rigidbody = rigidbody
 	pass
 	
